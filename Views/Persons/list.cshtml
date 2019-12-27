@@ -1,0 +1,44 @@
+﻿
+@model IEnumerable<Person>
+
+@{
+    Layout = "_Layout";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<style>
+    p {
+        font: bold, 12px;
+    }
+</style>
+<body>
+    <h1>Persons</h1>
+    @{
+        foreach (Person ch in Model)
+        {
+            <div><p></p>@ch.id     @ch.firstName     @ch.lastName    @ch.age</div>
+            <hr />
+        }
+    }
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+@*--//https://getbootstrap.com/docs/4.4/layout/grid/*@
