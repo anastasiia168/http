@@ -19,26 +19,60 @@
 </style>
 <body>
     <h1>Persons</h1>
-    @{
-        foreach (Person ch in Model)
-        {
-            <div><p></p>@ch.id     @ch.firstName     @ch.lastName    @ch.age</div>
-            <hr />
-        }
-    }
+    <div>
+        <input id="numberOfElement" type="text" />
+        <input id="changeName" type="text" />
+
+
+        <button id="changeBtn"> ujPDATE</button>
+
+
+
+        <button id="addNewBtn" > add </button>
+        <button id="deleteBtn"> delete </button>
+
+        
+
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                One of three columns
-            </div>
+                <h3> Id</h3>
+</div>
             <div class="col-sm">
-                One of three columns
-            </div>
+                <h3> First Name</h3>
+</div>
             <div class="col-sm">
-                One of three columns
-            </div>
+                <h3>Last Name</h3>
+</div>
+            <div class="col-sm">
+                <h3> Age</h3>
+</div>
         </div>
     </div>
+    @{
+        foreach (Person ch in Model)
+        {
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    @ch.id
+                </div>
+                <div class="col-sm">
+                    @ch.firstName
+                </div>
+                <div class="col-sm">
+                    @ch.lastName
+                </div>
+                <div class="col-sm">
+                    @ch.age
+                </div>
+            </div>
+        </div>
+        }
+    }
+
 </body>
 </html>
 @*--//https://getbootstrap.com/docs/4.4/layout/grid/*@
